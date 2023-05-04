@@ -6,6 +6,6 @@ import tensorflow as tf
 from sklearn.model_selection import train_test_split
 
 path = "PNG/"
-x = cv2.imread(os.path.join('PNG', 'Original', '2.png'))
+images = sorted(glob(os.path.join(path, "Original/*")))
+masks = sorted(glob(os.path.join(path, "groundTruth/*")))
 
-print(x)
